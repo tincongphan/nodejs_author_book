@@ -1,0 +1,10 @@
+const express = require('express')
+const authorController = require('../controllers/authorController')
+const validateAuthor = require('../validates/validateAuthor')
+const authorRouter = express.Router()
+authorRouter.get('/:id', authorController.getAAuthor)
+authorRouter.get('/', authorController.getListAuthor)
+authorRouter.post('/', authorController.createAuthor)
+authorRouter.put('/:id', authorController.updateAuthor)
+authorRouter.delete('/:id', authorController.deleteAuthor)
+module.exports = authorRouter
